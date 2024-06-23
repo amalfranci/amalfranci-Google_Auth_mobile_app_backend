@@ -20,6 +20,11 @@ app.use(session({
 app.use(cors());
 app.use(bodyParser.json());
 
+app.get("/", (req, res) => {
+    
+    res.send("welcome to home")
+})
+
 dbCon();
 
 app.use('/user', router);

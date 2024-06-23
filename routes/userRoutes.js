@@ -1,4 +1,4 @@
-import express from 'express';
+import express, { Router } from 'express';
 import { UpdateUserInformation, UserLogin, VerifyOtp } from '../Controllers/UserController.js';
 import passport from 'passport';
 import '../passport.js';
@@ -8,8 +8,9 @@ const router = express.Router();
 router.use(passport.initialize()); 
 router.use(passport.session());
 
+
 const loadAuth = (req, res) => {
-    res.send('Auth page');
+     res.send("welcome to home")
 }
 
 const successGoogleLogin = (req, res) => { 
